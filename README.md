@@ -3,10 +3,12 @@
 ## Шаблон для автоматизации тестирования на python
 
 ### Шаги
-1. Склонировать проект 'git clone https://github.com/имя_пользователя/
+1. Склонировать проект 'git clone https://github.com/TensRussia/Final_projekt.git
    pytest_ui_api_template.git'
 2. Установить зависимости
 3. Запустить тесты 'pytest'
+4. Сгенерировать отчет 'allure generate allure-files -o allure-report'
+5. Открыть отчет 'allure open allure-report'
 
 ### Библиотеки (!)
 - pyp install pytest
@@ -32,3 +34,4 @@
 
 ### Полезные ссылки
 - [Подсказка по markdown](https://www.markdownguide.org/basic-syntax/)
+- [Генератор файла .gitignore](https://www.toptal.com/developers/gitignore)
