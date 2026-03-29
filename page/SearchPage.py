@@ -10,13 +10,11 @@ class SearchPage:
 
     def __init__(self, driver: WebDriver) -> None:
         """Инициализирует класс страницы поиска.
-
         Args:
             driver (WebDriver): Экземпляр веб-драйвера Selenium.
         """
         self.driver = driver
         self.wait = WebDriverWait(driver, 2)
-
         self.input_locator = (By.ID, 'avia_form_destination-input')
         self.dropdown_item_locator = (By.ID, 'avia_form_destination-menu')
         self.empty_result_locator = (By.CSS_SELECTOR, '[data-test-id="status-message"]')
@@ -27,7 +25,6 @@ class SearchPage:
 
     def enter_search_query(self, query: str) -> None:
         """Вводит текст в поле поиска.
-
         Args:
             query (str): Поисковый запрос.
         """
@@ -46,14 +43,11 @@ class SearchPage:
 
     def select_dropdown_item_by_text(self, target_text: str) -> None:
         """Ищет элемент в дропдауне по частичному совпадению текста и кликает по нему.
-
         Args:
             target_text (str): Текст (или часть текста), который должен быть в элементе.
         """
-
         self.wait.until(EC.text_to_be_present_in_element(self.dropdown_item_locator, target_text))
         items = self.wait.until(EC.presence_of_all_elements_located(self.dropdown_item_locator))
-
         for item in items[0].find_elements(By.XPATH, './*'):
             if target_text.lower() in item.text.lower():
                 item.click()
