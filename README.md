@@ -10,42 +10,42 @@
 
 ### Шаги
 1. Склонировать проект и перейти в папку проекта:
-git clone https://github.com/TensRussia/Final_projekt.git
-cd <название_папки>
+   git clone https://github.com/TensRussia/Final_projekt.git
+   cd <название_папки>
 
 2. Создать и активировать виртуальное окружение:
-Windows:
-python -m venv venv
-venv\Scripts\activate
+   Windows:
+      python -m venv venv
+      venv\Scripts\activate
 
-macOS / Linux:
-python3 -m venv venv
-source venv/bin/activate
+   macOS / Linux:
+      python3 -m venv venv
+      source venv/bin/activate
 
 3. Установить зависимости
-Для установки зависимостей проекта выполнить команду:
-pip install -r requirements.txt
+   Для установки зависимостей проекта выполнить команду:
+   pip install -r requirements.txt
 
 4. Запустить тесты 'pytest'
-В проекте настроены маркеры для раздельного запуска различных видов тестирования.
-Убедитесь, что вы находитесь в корневой директории проекта перед запуском.
+   В проекте настроены маркеры для раздельного запуска различных видов тестирования.
+   Убедитесь, что вы находитесь в корневой директории проекта перед запуском.
 
-Запуск только UI-тестов:
-pytest -m "ui"
-Запуск только API-тестов:
-pytest -m "api"
-Запуск всех тестов проекта:
-pytest
+   Запуск только UI-тестов:
+      pytest -m "ui"
+   Запуск только API-тестов:
+      pytest -m "api"
+   Запуск всех тестов проекта:
+      pytest
 
 5. Сгенерировать отчет
-Для формирования наглядного отчета о прохождении тестов выполнить следующие шаги:
+   Для формирования наглядного отчета о прохождении тестов выполнить следующие шаги:
 
-Запустить тесты с флагом сохранения результатов:
-pytest --alluredir=allure-results
+   Запустить тесты с флагом сохранения результатов:
+      pytest --alluredir=allure-results
 
 6. Открыть отчет
-Сгенерировать и открыть отчет в браузере:
-allure serve allure-results
+   Сгенерировать и открыть отчет в браузере:
+      allure serve allure-results
 
 ### Библиотеки (!)
 - pyp install pytest
